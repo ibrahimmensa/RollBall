@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/Splesh.unity
+    guid: c021d7e8eb00e5242a6bbf3088a5d824
+  - enabled: 1
+    path: Assets/_Scenes/MainMenu.unity
+    guid: 39d60e50ca565194fafea8c085a29650
+  - enabled: 1
+    path: Assets/_Scenes/GamePlay.unity
+    guid: 5564369f1ea78354eb359077cfb18e7d
+  m_configObjects: {}
