@@ -39,7 +39,7 @@ public class CoinsAdd : MonoBehaviour
             timeElapsed += speed * Time.deltaTime;
             yield return new WaitForSeconds(step);
 
-            if (Vibration.isVibratingOn)
+            if (PlayerPrefs.GetInt("Vibrate") == 1)
                 Handheld.Vibrate();
 
             coins = (int)(_currentcoins + Mathf.Lerp(0, _coinsToAdd, timeElapsed));

@@ -73,14 +73,6 @@ public class MainSceneManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Sound", 0);
     }
-    public void MusicOn()
-    {
-        PlayerPrefs.SetInt("Music", 1);
-    }
-    public void MusicOFF()
-    {
-        PlayerPrefs.SetInt("Music", 0);
-    }
     public void Ads_freeCoins()
     {
         if (AdsInitializer.Instance)

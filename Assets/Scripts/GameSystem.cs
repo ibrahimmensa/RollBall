@@ -36,6 +36,7 @@ public class GameSystem : MonoBehaviour
     public GameCamera maincam;
     public Animator HoldBtn;
     public GameObject RunningBall;
+    public AudioSource CollisionSound;
 
     public void Awake()
     {
@@ -44,7 +45,7 @@ public class GameSystem : MonoBehaviour
     }
     private void Start()
     {
-       PlayerPrefs.SetInt("Level", 12);
+      // PlayerPrefs.SetInt("Level", 12);
         if (PlayerPrefs.HasKey("Level"))
         {
             if (PlayerPrefs.GetInt("Level") > 15)
@@ -82,25 +83,6 @@ public class GameSystem : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("Sound", 1);
-        }
-
-
-        //check Music settings
-        if (PlayerPrefs.HasKey("Music"))
-        {
-            if (PlayerPrefs.GetInt("Music") == 1)
-            {
-                LEVEL.BG_Music.SetActive(true);
-            }
-            else
-            {
-                LEVEL.BG_Music.SetActive(false);
-            }
-
-        }
-        else
-        {
-            PlayerPrefs.SetInt("Music", 1);
         }
         maincam.target = LEVEL.LevelManager.transform.GetChild(PlayerPrefs.GetInt("Level")).transform.GetChild(2);
         RunningBall = maincam.target.transform.GetChild(1).gameObject;
@@ -220,7 +202,6 @@ public class Level
 
     //sound and music
     public GameObject Sound;
-    public GameObject BG_Music;
     public AudioSource S_Complete;
     public AudioSource S_Failed;
 

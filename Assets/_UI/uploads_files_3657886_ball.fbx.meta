@@ -12,7 +12,17 @@ ModelImporter:
   - first:
       74: -4404092902359945233
     second: Sphere|SphereAction.002
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 828228554cf15e14b86c11bae91fd886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 8698441c5e358ef4c8307df362519052, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -97,7 +107,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.35
+    globalScale: 35
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1

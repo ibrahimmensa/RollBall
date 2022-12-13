@@ -10,7 +10,7 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Level Finished");
-        if(Vibration.isVibratingOn)
+        if(PlayerPrefs.GetInt("Vibrate") == 1)
             Handheld.Vibrate();
 
         onGoal.Invoke();

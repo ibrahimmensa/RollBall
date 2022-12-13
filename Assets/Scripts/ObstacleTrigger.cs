@@ -9,9 +9,10 @@ public class ObstacleTrigger : MonoBehaviour
         if (GameSystem.Sytem.LEVEL.GAME_STATE == GameState.LOSE)
             return;
 
-        if (Vibration.isVibratingOn)
+        if (PlayerPrefs.GetInt("Vibrate")==1)
             Handheld.Vibrate();
 
+        GameSystem.Sytem.CollisionSound.Play();
         GameSystem.Sytem.LEVEL.LevelFailed();
         Destroy(this.gameObject.transform.parent.gameObject);
     }

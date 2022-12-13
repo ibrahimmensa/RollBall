@@ -5,29 +5,29 @@ using UnityEngine.UI;
 
 public class Vibration : MonoBehaviour
 {
-    public Image vibration_waves;
+    //public Image vibration_waves;
 
-    public static bool isVibratingOn;
+    //public static bool isVibratingOn;
 
     void Start()
     {
-        isVibratingOn = (PlayerPrefs.GetInt("vib") - 1) != 0;
+        //isVibratingOn = (PlayerPrefs.GetInt("Vibrate") - 1) != 0;
 
-        if (PlayerPrefs.GetInt("vib") == 0) isVibratingOn = true;
+        //if (PlayerPrefs.GetInt("Vibrate") == 1) isVibratingOn = true;
 
-        vibration_waves.gameObject.SetActive(isVibratingOn);
+        //vibration_waves.gameObject.SetActive(isVibratingOn);
     }
 
-    public void OnClick()
-    {
-        if (isVibratingOn)
-            PlayerPrefs.SetInt("vib", 1);
-        else
-            PlayerPrefs.SetInt("vib", 2);
+    //public void OnClick()
+    //{
+    //    if (isVibratingOn)
+    //        PlayerPrefs.SetInt("vib", 1);
+    //    else
+    //        PlayerPrefs.SetInt("vib", 2);
 
 
-        isVibratingOn = (PlayerPrefs.GetInt("vib") - 1) != 0;
+    //    isVibratingOn = (PlayerPrefs.GetInt("vib") - 1) != 0;
 
-        vibration_waves.gameObject.SetActive(isVibratingOn);
-    }
+    //    vibration_waves.gameObject.SetActive(isVibratingOn);
+    //}
 }
