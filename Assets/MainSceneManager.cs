@@ -7,10 +7,6 @@ public class MainSceneManager : MonoBehaviour
 {
     public int TotalCoins;
     public Text CoinsTxt;
-    // Start is called before the first frame update
-
-
-    //sound and music
     public GameObject Sound;
 
 

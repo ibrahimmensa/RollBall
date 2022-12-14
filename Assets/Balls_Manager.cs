@@ -21,6 +21,7 @@ public class Balls_Manager : MonoBehaviour
                 Bal.GetComponent<MeshRenderer>().material = Balls[i].GetComponent<MeshRenderer>().material;
                 Bal.GetComponent<MeshRenderer>().enabled = true;
                 Line.GetComponent<MeshRenderer>().material = LineColor[i];
+                transform.GetChild(0).GetComponent<ParticleSystemRenderer>().material = LineColor[i];
             }
         }
     }

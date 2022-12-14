@@ -36,4 +36,8 @@ public class SettingHandler : MonoBehaviour
     {
         
     }
+    public void PrivacyPolicy()
+    {
+        Application.OpenURL("https://mensaplay.com/wensa/privacy-policy.html");
+    }
 }

@@ -193,7 +193,7 @@ public class StoreManager : MonoBehaviour
         Ball_Inuse.gameObject.SetActive(true);
         Ball_Select.interactable = false;
     }
-    public void Ads_ToUnlockShiba()
+    public void Ads_ToUnlockBall()
     {
 
         if (AdsInitializer.Instance)
