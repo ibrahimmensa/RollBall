@@ -646,7 +646,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2021234963}
         m_TargetAssemblyTypeName: SettingHandler, Assembly-CSharp
         m_MethodName: PrivacyPolicy
         m_Mode: 1
@@ -1942,7 +1942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24700001, y: 0.39927086}
   m_AnchorMax: {x: 0.7528519, y: 0.6565832}
-  m_AnchoredPosition: {x: -3.999878, y: -52.416}
+  m_AnchoredPosition: {x: -3.999817, y: -52.416}
   m_SizeDelta: {x: 235.79, y: 104.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &530343435
@@ -4118,10 +4118,10 @@ RectTransform:
   m_Father: {fileID: 503089173}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35000002, y: 0.39860633}
-  m_AnchorMax: {x: 0.6566667, y: 0.8112126}
-  m_AnchoredPosition: {x: 0.0848999, y: 0}
-  m_SizeDelta: {x: -2.1697006, y: 0.8010025}
+  m_AnchorMin: {x: 0.5, y: 0.62635857}
+  m_AnchorMax: {x: 0.5, y: 0.62635857}
+  m_AnchoredPosition: {x: 6.4899974, y: -0.3999939}
+  m_SizeDelta: {x: 273, y: 273}
   m_Pivot: {x: 0.50000006, y: 0.50000006}
 --- !u!114 &1318566628
 MonoBehaviour:
