@@ -21,7 +21,7 @@ MonoBehaviour:
     AdsWatched: 0
     NeedCoins_ToUnlock: 0
     isSelected: 1
-    CHaracterImg: {fileID: 21300000, guid: a98d45f7ff20d414da453939716a4ea6, type: 3}
+    CHaracterImg: {fileID: 21300000, guid: 8ad3ee4f71fff8f44a3d5f005eefb36d, type: 3}
   - Character_Name: Ball_2
     CanUnlockByAds: 1
     ComingSoon: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     AdsWatched: 0
     NeedCoins_ToUnlock: 100
     isSelected: 0
-    CHaracterImg: {fileID: 21300000, guid: a53c655753d1f6c4ca11714c7e842632, type: 3}
+    CHaracterImg: {fileID: 21300000, guid: 36806368dad7ea04eb678f4c0535ed48, type: 3}
   - Character_Name: Ball_3
     CanUnlockByAds: 1
     ComingSoon: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
     AdsWatched: 0
     NeedCoins_ToUnlock: 200
     isSelected: 0
-    CHaracterImg: {fileID: 21300000, guid: fb99fccea1bb24c40b4239442d9fce0a, type: 3}
+    CHaracterImg: {fileID: 21300000, guid: a54707eb274533840b7dcaa0213f9296, type: 3}
   - Character_Name: Ball_4
     CanUnlockByAds: 1
     ComingSoon: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
     AdsWatched: 0
     NeedCoins_ToUnlock: 300
     isSelected: 0
-    CHaracterImg: {fileID: 21300000, guid: 7d82c731046a2484996a397222defba3, type: 3}
+    CHaracterImg: {fileID: 21300000, guid: 507f3535f6f441d45b010d3ad18d7795, type: 3}
   - Character_Name: Ball_5
     CanUnlockByAds: 0
     ComingSoon: 1
@@ -57,4 +57,4 @@ MonoBehaviour:
     AdsWatched: 0
     NeedCoins_ToUnlock: 0
     isSelected: 0
-    CHaracterImg: {fileID: 21300000, guid: a98d45f7ff20d414da453939716a4ea6, type: 3}
+    CHaracterImg: {fileID: 21300000, guid: 8ad3ee4f71fff8f44a3d5f005eefb36d, type: 3}

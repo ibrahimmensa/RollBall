@@ -88,7 +88,7 @@ public class GameSystem : MonoBehaviour
         RunningBall = maincam.target.transform.GetChild(1).gameObject;
         LEVEL.Cointxt.text = PlayerPrefs.GetInt("Coins").ToString();
         LEVEL.level = PlayerPrefs.GetInt("Level") + 1;
-        LEVEL.Leveltxt.text = "Level " + "- " + LEVEL.level;
+        LEVEL.Leveltxt.text = "LEVEL " + "- " + LEVEL.level;
         LEVEL.GAME_STATE = GameState.GAME;
     }
     public void SetGameState(string state)
