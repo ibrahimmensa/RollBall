@@ -9,13 +9,17 @@ public class MainSceneManager : MonoBehaviour
     public Text CoinsTxt;
     public GameObject Sound;
 
-
+    private void OnEnable()
+    {
+        if (GoogleAdsManager.Instance)
+        {
+            Debug.Log("Request Banner");
+            GoogleAdsManager.Instance.RequestBanner();
+        }
+    }
     void Start()
     {
-        //if (GoogleAds.Instance)
-        //{
-        //    GoogleAds.Instance.RequestBanner();
-        //}
+        
         if (PlayerPrefs.HasKey("Coins"))
         {
             TotalCoins = PlayerPrefs.GetInt("Coins");
