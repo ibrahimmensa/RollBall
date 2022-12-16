@@ -52,16 +52,18 @@ public class TimerCounter : MonoBehaviour
             RestartLeveCall();
             return;
         }
-        if (!StartCounting) return;
+        if (!StartCounting)
+        {
+            return;
+        }
+        else
+        {
+            timeElapsed -= Time.unscaledDeltaTime;
 
-        timeElapsed -= Time.unscaledDeltaTime;
+            CounterText.text = ((int)timeElapsed).ToString();
 
-        CounterText.text = ((int)timeElapsed).ToString();
-
-        ProgressBorder.fillAmount = timeElapsed / 10f;
-
-        //if (timeElapsed <= 3.5f)
-        //    TapToRestartGO.SetActive(true);
+            ProgressBorder.fillAmount = timeElapsed / 10f;
+        }
     }
 
     void RestartLevelCall()
@@ -79,6 +81,7 @@ public class TimerCounter : MonoBehaviour
             return;
 
         LeveRestartCalled = true;
+        StartCounting = false;
         ResumeBtn.interactable = false;
     }
 }

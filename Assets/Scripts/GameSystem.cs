@@ -43,6 +43,15 @@ public class GameSystem : MonoBehaviour
 
         PLAYER = new Player();
     }
+    private void OnEnable()
+    {
+
+        if (GoogleAdsManager.Instance)
+        {
+            Debug.Log("Request Banner");
+            GoogleAdsManager.Instance.RequestBanner();
+        }
+    }
     private void Start()
     {
       // PlayerPrefs.SetInt("Level", 12);
@@ -120,6 +129,10 @@ public class GameSystem : MonoBehaviour
     }
     public void Home()
     {
+        if(GoogleAdsManager.Instance)
+        {
+            GoogleAdsManager.Instance.showInterstitial();
+        }
         LEVEL.Home();
     }
     public void resume()
@@ -135,6 +148,10 @@ public class GameSystem : MonoBehaviour
         LEVEL.LevelComplete_Cointxt.text = PlayerPrefs.GetInt("Coins").ToString();
         LEVEL.P_BlackScreen.SetActive(true);
         yield return new WaitForSeconds(0.5f);
+        if (GoogleAdsManager.Instance)
+        {
+            GoogleAdsManager.Instance.showInterstitial();
+        }
         LEVEL.P_Levelcomplete.SetActive(true);
         LEVEL.P_BlackScreen.SetActive(false);
         totl = 20 + 5 * (PlayerPrefs.GetInt("Level") + 1);
@@ -159,6 +176,10 @@ public class GameSystem : MonoBehaviour
         LEVEL.P_LevelFail.transform.Find("Coins").transform.GetChild(0).GetComponent<Text>().text = PlayerPrefs.GetInt("Coins").ToString();
         LEVEL.P_BlackScreen.SetActive(true);
         yield return new WaitForSeconds(0.5f);
+        if (GoogleAdsManager.Instance)
+        {
+            GoogleAdsManager.Instance.showInterstitial();
+        }
         LEVEL.P_LevelFail.SetActive(true);
         LEVEL.P_BlackScreen.SetActive(false);
         yield return null;
@@ -265,18 +286,6 @@ public class Level
 
     public void NextLevel()
     {
-        //CurrentLevel++;
-
-        //if (CurrentLevel > 16)
-        //{
-        //    CurrentLevel = 1;
-        //}
-
-        //PlayerPrefs.SetInt("lvl", CurrentLevel);
-        //GameSystem.Sytem.LevelManager.transform.GetChild(CurrentLevel -1).gameObject.SetActive(true);
-        //GameSystem.Sytem.LevelManager.transform.GetChild(CurrentLevel - 2).gameObject.SetActive(false);
-
-
         if (level == 15)
         {
             PlayerPrefs.SetInt("Level", -1);
@@ -285,7 +294,6 @@ public class Level
         SceneManager.LoadScene(2);
 
         GAME_STATE = GameState.GAME;
-        //SceneManager.LoadScene("Level_" + CurrentLevel, LoadSceneMode.Single);
     }
 
     public void Home()
@@ -301,6 +309,7 @@ public class Level
             }
             PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
             levelCom = false;
+            SceneManager.LoadScene(1);
         }
         else
         {
