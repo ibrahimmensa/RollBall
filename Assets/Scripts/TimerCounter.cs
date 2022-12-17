@@ -12,26 +12,22 @@ public class TimerCounter : MonoBehaviour
 
     //public GameObject TapToRestartGO;
 
+
     public float timeElapsed = 10f;
 
     public GameObject Restart;
     public Button ResumeBtn;
-
-    bool LevelRestartCalled;
-    bool LeveRestartCalled;
 
     bool StartCounting;
 
     void OnEnable()
     {
         StartCounting = false;
-        LevelRestartCalled = false;
-        LeveRestartCalled = false;
 
         ProgressBorder.fillAmount = 1;
         CounterText.text = "10";
 
-        Invoke("StartCountingCall", 0.5f);
+        Invoke(nameof(StartCountingCall), 0.5f);
 
         timeElapsed = 10f;
     }
@@ -43,44 +39,35 @@ public class TimerCounter : MonoBehaviour
 
     void Update()
     {
-        if (timeElapsed <= 5f)
+        if (StartCounting)
+        {
+            timeElapsed -= Time.deltaTime;
+            if (timeElapsed >= 0)
+            {
+                CounterText.text = ((int)timeElapsed).ToString();
+            }
+
+            ProgressBorder.fillAmount = timeElapsed / 10f;
+        }
+        if (timeElapsed <= 5f && timeElapsed > 0)
         {
             RestartLevelCall();
         }
-        if(timeElapsed <= 0)
+        else if(timeElapsed <= 0)
         {
             RestartLeveCall();
             return;
         }
-        if (!StartCounting)
-        {
-            return;
-        }
-        else
-        {
-            timeElapsed -= Time.unscaledDeltaTime;
-
-            CounterText.text = ((int)timeElapsed).ToString();
-
-            ProgressBorder.fillAmount = timeElapsed / 10f;
-        }
+        
     }
 
     void RestartLevelCall()
     {
-        if (LevelRestartCalled)
-            return;
-
-        LevelRestartCalled = true;
 
         Restart.SetActive(true);
     }
     void RestartLeveCall()
     {
-        if (LeveRestartCalled)
-            return;
-
-        LeveRestartCalled = true;
         StartCounting = false;
         ResumeBtn.interactable = false;
     }

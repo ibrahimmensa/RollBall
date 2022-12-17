@@ -3,7 +3,12 @@ guid: e2ad250f48b79a94fb0d4e2fae94a0b7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Tennis_Ball
+    second: {fileID: 2100000, guid: 6b570916872957b4f888083795a9bef7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0035499998
+    globalScale: 0.355
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

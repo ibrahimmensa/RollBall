@@ -37,6 +37,7 @@ public class GameSystem : MonoBehaviour
     public Animator HoldBtn;
     public GameObject RunningBall;
     public AudioSource CollisionSound;
+    public GameObject Timmer;
 
     public void Awake()
     {
@@ -100,6 +101,7 @@ public class GameSystem : MonoBehaviour
         LEVEL.Leveltxt.text = "LEVEL " + "- " + LEVEL.level;
         LEVEL.GAME_STATE = GameState.GAME;
     }
+    
     public void SetGameState(string state)
     {
         LEVEL.GAME_STATE = (GameState)Enum.Parse(typeof(GameState), state);

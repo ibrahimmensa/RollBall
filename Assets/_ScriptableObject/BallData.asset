@@ -25,7 +25,7 @@ MonoBehaviour:
   - Character_Name: Ball_2
     CanUnlockByAds: 1
     ComingSoon: 0
-    IsLocked: 0
+    IsLocked: 1
     AdsToWatch_ToUnlock: 1
     AdsWatched: 0
     NeedCoins_ToUnlock: 100
