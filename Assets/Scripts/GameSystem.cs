@@ -55,7 +55,7 @@ public class GameSystem : MonoBehaviour
     }
     private void Start()
     {
-      // PlayerPrefs.SetInt("Level", 12);
+       PlayerPrefs.SetInt("Level", 12);
         if (PlayerPrefs.HasKey("Level"))
         {
             if (PlayerPrefs.GetInt("Level") > 15)
