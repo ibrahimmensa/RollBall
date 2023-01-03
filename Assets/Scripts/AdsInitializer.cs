@@ -18,6 +18,7 @@ public class AdsInitializer : Singleton<AdsInitializer>, IUnityAdsInitialization
     [SerializeField] string _iOSGameId;
     [SerializeField] bool _testMode = true;
     public string _gameId;
+    public bool ShowAds;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
     [SerializeField] string _androidAdUnitIdInterstitial = "Interstitial_Android";
@@ -31,6 +32,21 @@ public class AdsInitializer : Singleton<AdsInitializer>, IUnityAdsInitialization
         if(AdsInitializer.Instance  != this)
         {
             Destroy(gameObject);
+        }
+        if(PlayerPrefs.HasKey("ShowAds"))
+        {
+            if(PlayerPrefs.GetInt("ShowAds") == 1)
+            {
+                ShowAds = true;
+            }
+            else
+            {
+                ShowAds= false;
+            }
+        }
+        else
+        {
+            ShowAds = true;
         }
         Debug.Log("Initializing");
         DontDestroyOnLoad(this);

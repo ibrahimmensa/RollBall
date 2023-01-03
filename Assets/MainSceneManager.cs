@@ -14,7 +14,10 @@ public class MainSceneManager : MonoBehaviour
         if (GoogleAdsManager.Instance)
         {
             Debug.Log("Request Banner");
-            GoogleAdsManager.Instance.RequestBanner();
+            if (PlayerPrefs.GetInt("ShowAds") == 1)
+            {
+                GoogleAdsManager.Instance.RequestBanner();
+            }
         }
     }
     void Start()

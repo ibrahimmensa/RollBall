@@ -249,15 +249,15 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: RollBallKeyStore/user.keystore'
-  AndroidKeyaliasName: ball in goal
+  AndroidKeystoreName: '{inproject}: keystore/user.keystore'
+  AndroidKeyaliasName: supercolorfootball
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -883,10 +883,11 @@ PlayerSettings:
     Build: 0
     Collab: 0
     Game Performance: 0
-    Purchasing: 0
+    Legacy Analytics: 1
+    Purchasing: 1
     UDP: 0
     UNet: 1
-    Unity Ads: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -900,11 +901,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 32d3462c-608c-4362-b310-5db82030a46f
+  cloudProjectId: 2e17ce43-1bda-4f0e-93e2-c34218b47c96
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Roll To Goal 3D
-  organizationId: ibrahimnaveedmensa
+  projectName: Super Color Football 3D
+  organizationId: mensaesportllc
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

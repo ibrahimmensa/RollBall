@@ -50,12 +50,15 @@ public class GameSystem : MonoBehaviour
         if (GoogleAdsManager.Instance)
         {
             Debug.Log("Request Banner");
-            GoogleAdsManager.Instance.RequestBanner();
+            if (PlayerPrefs.GetInt("ShowAds") == 1)
+            {
+                GoogleAdsManager.Instance.RequestBanner();
+            }
         }
     }
     private void Start()
     {
-       PlayerPrefs.SetInt("Level", 12);
+       //PlayerPrefs.SetInt("Level", 12);
         if (PlayerPrefs.HasKey("Level"))
         {
             if (PlayerPrefs.GetInt("Level") > 15)
@@ -133,7 +136,11 @@ public class GameSystem : MonoBehaviour
     {
         if(GoogleAdsManager.Instance)
         {
-            GoogleAdsManager.Instance.showInterstitial();
+            if(PlayerPrefs.GetInt("ShowAds") == 1)
+            {
+                //GoogleAdsManager.Instance.showInterstitial();
+                AdsInitializer.Instance.ShowAdInterstitial();
+            }
         }
         LEVEL.Home();
     }
@@ -152,7 +159,11 @@ public class GameSystem : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (GoogleAdsManager.Instance)
         {
-            GoogleAdsManager.Instance.showInterstitial();
+            if (PlayerPrefs.GetInt("ShowAds") == 1)
+            {
+                AdsInitializer.Instance.ShowAdInterstitial();
+                //GoogleAdsManager.Instance.showInterstitial();
+            }
         }
         LEVEL.P_Levelcomplete.SetActive(true);
         LEVEL.P_BlackScreen.SetActive(false);
@@ -180,7 +191,10 @@ public class GameSystem : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (GoogleAdsManager.Instance)
         {
-            GoogleAdsManager.Instance.showInterstitial();
+            if (PlayerPrefs.GetInt("ShowAds") == 1)
+            {
+                AdsInitializer.Instance.ShowAdInterstitial();
+            }
         }
         LEVEL.P_LevelFail.SetActive(true);
         LEVEL.P_BlackScreen.SetActive(false);
